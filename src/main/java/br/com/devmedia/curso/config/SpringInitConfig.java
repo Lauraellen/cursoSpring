@@ -41,7 +41,7 @@ public class SpringInitConfig extends AbstractAnnotationConfigDispatcherServletI
 	 * Sempre que encontrar uma '/', a aplicação irá saber
 	 * que está lidando com um servlet
 	 * 
-	 * a anotação @O
+	 *
 	 */
 	@Override
 	protected String[] getServletMappings() {

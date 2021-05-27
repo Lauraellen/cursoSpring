@@ -1,4 +1,0 @@
-0:0:0:0:0:0:0:1 - - [26/May/2021:10:46:41 -0300] "GET / HTTP/1.1" 404 - http-bio-9090-exec-1 0
-0:0:0:0:0:0:0:1 - - [26/May/2021:10:47:44 -0300] "GET /intro-spring-mvc HTTP/1.1" 302 - http-bio-9090-exec-4 0
-0:0:0:0:0:0:0:1 - - [26/May/2021:10:47:47 -0300] "GET /intro-spring-mvc/ HTTP/1.1" 200 162 http-bio-9090-exec-6 3078
-0:0:0:0:0:0:0:1 - - [26/May/2021:10:47:48 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-7 0
