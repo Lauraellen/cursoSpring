@@ -3,11 +3,16 @@ package br.com.devmedia.curso.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.devmedia.curso.dao.UsuarioDao;
+import br.com.devmedia.curso.domain.Usuario;
 
 /*
  * a string "usuario" é o caminho na url para acessar esse controller
@@ -39,5 +44,36 @@ public class UsuarioController {
 	public ModelAndView getAll(ModelMap model) {
 		model.addAttribute("usuarios", dao.getAll());
 		return new ModelAndView("/user/list", model);
+	}
+	
+	/*
+	 * Método para redirecionar para a tela de cadastro;
+	 * ao invés de usarmos @RequestMapping, usamos @GetMapping q já especifica que é do tipo get
+	 * e depois só passamos o path;
+	 * 
+	 * A anotação ModelAttribute é porque estamos trabalhando com a página add que tem um modelAttribute,
+	 * para fazermos a ligação entre ambas, usamos essa anotação. E o tipo de objeto q vamos usar 
+	 * no formulario, é do tipo Usuario.
+	 * 
+	 * Quando acessarmos a url cadastro, irá abrir a página add;
+	 */
+	@GetMapping("/cadastro")
+	public String cadastro(@ModelAttribute("usuario") Usuario usuario, ModelMap model) {
+		return "/user/add";
+	}
+	
+	/*
+	 * Método para salvar o novo cadastro;
+	 * A anotação ModelAttribute é porque estamos trabalhando com a página add que tem um modelAttribute,
+	 * para fazermos a ligação entre ambas, usamos essa anotação. E o tipo de objeto q vamos usar 
+	 * no formulario, é do tipo Usuario.
+	 * 
+	 * Quando o formulario enviar os dados, recebemos ja como um objeto;
+	 */
+	@PostMapping("/save")
+	public String save(@ModelAttribute("usuario") Usuario usuario, RedirectAttributes attr) {
+		dao.salvar(usuario);
+		attr.addFlashAttribute("message", "Usuário salvo com sucesso");
+		return "redirect:/usuario/todos";
 	}
 }
