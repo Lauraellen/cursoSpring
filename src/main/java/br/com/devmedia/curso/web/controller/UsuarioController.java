@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -75,5 +76,32 @@ public class UsuarioController {
 		dao.salvar(usuario);
 		attr.addFlashAttribute("message", "Usuário salvo com sucesso");
 		return "redirect:/usuario/todos";
+	}
+	
+	/*
+	 * Recebemos um id nesse método
+	 * A anotação @PathVariable, captura o valor que estamos recebendo na url e adiciona ela
+	 * à um objeto.
+	 * 
+	 * Criamos um usuario do tipo usuario e usando o dao, passamos o id capturado, e que trará
+	 * o usuario com esse id.
+	 * 
+	 */
+	@GetMapping("/update/{id}")
+	public ModelAndView preUpdate(@PathVariable("id") Long id, ModelMap model) {
+		Usuario usuario = dao.getId(id);
+		model.addAttribute("usuario", usuario);
+		return new ModelAndView("/user/add", model);
+	}
+	
+	/*
+	 * método que recebe o formulario depois dos dados serem alterados
+	 */
+	
+	@PostMapping("/update")
+	public ModelAndView update(@ModelAttribute("usuario") Usuario usuario, RedirectAttributes attr) {
+		dao.editar(usuario);
+		attr.addFlashAttribute("message", "Usuário alterado com sucesso");
+		return new ModelAndView("redirect:/usuario/todos");
 	}
 }

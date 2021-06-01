@@ -27,10 +27,14 @@
     	 	Utilizando a tag spring:url nos proporciona um 'atalho' até o controller, para não
     	 	precisarmos colocar toda a url desde o http, colocamos apenas o caminho;
     	 	e var e a variável que recebe esse value, nesse caso 'save';
-    	 	e assim, em action, ao inves de colocarmos a url, apenas inserimos o nome da variável
+    	 	e assim, em action, ao inves de colocarmos a url, apenas inserimos o nome da variável.
+    	 	
+    	 	para usar o mesmo formulario para editar e criar, fazemos:
+    	 		se o usuario.id for igual a null usamos usuario/save, senão usuario/update
     	 -->
-    	<spring:url value="/usuario/save" var="save"/>
+    	<spring:url value="${usuario.id == null ? '/usuario/save' : '/usuario/update'}" var="save"/>
         <form:form modelAttribute="usuario" action="${save }" method="post">
+        	<form:hidden path="id"/>
             <div class="form-group">
                 <label for="nome">Nome: </label>
                 <form:input path="nome" class="form-control"/>
