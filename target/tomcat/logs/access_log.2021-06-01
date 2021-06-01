@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [01/Jun/2021:09:52:30 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 2297 http-bio-9090-exec-1 887
+0:0:0:0:0:0:0:1 - - [01/Jun/2021:09:52:31 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-3 0
