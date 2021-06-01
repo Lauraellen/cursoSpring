@@ -1,2 +1,0 @@
-0:0:0:0:0:0:0:1 - - [27/May/2021:10:11:44 -0300] "GET /intro-spring-mvc/ HTTP/1.1" 200 170 http-bio-9090-exec-1 457
-0:0:0:0:0:0:0:1 - - [27/May/2021:10:11:48 -0300] "GET /intro-spring-mvc/teste HTTP/1.1" 200 195 http-bio-9090-exec-4 3

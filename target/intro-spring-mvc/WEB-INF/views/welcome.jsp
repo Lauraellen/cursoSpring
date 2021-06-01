@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2> Hello Spring MVC</h2>
+<!-- quando queremos usar a variavel declarada no controller, definimos ela assim: -->
 <h1>${teste}</h1>
 </body>
 </html>

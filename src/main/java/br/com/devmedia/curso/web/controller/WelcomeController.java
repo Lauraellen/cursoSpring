@@ -17,12 +17,15 @@ public class WelcomeController {
 	 * a anotação @RequestMapping indica ao spring qual método é pra ele usar;
 	 * possui dois atributos:
 	 * Value = path da requisição, caminho;
-	 * Method = método da requisição, se é GET, PUT, DELETE, etc
+	 * Method = método da requisição, se é GET, PUT, DELETE, etc;
+	 * 
+	 * o return está fazendo um redirecionamento para a página do controller
 	 */
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome() {
-		return "welcome";
+		//return "welcome";
+		return "redirect:/usuario/todos";
 	}
 	
 	/*
