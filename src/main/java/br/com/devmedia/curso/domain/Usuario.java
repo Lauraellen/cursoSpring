@@ -10,7 +10,7 @@ public class Usuario {
 	private Long id;
 	private String nome;
 	private String sobrenome;
-	
+	private TipoSexo sexo;
 	/*
 	 * Essa anotação transforma o retorno que vem como string, em um objeto.
 	 * Pois o spring espera um objeto
@@ -41,9 +41,16 @@ public class Usuario {
 		this.sobrenome = sobrenome;
 		this.dtNascimento = dtNascimento;
 	}
-	
-	
-	
+
+
+	public Usuario(Long id, String nome, String sobrenome, LocalDate dtNascimento, TipoSexo sexo) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.sexo = sexo;
+		this.dtNascimento = dtNascimento;
+	}
 
 	@Override
 	public String toString() {
@@ -78,6 +85,14 @@ public class Usuario {
 	}
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
+	}
+
+	public TipoSexo getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(TipoSexo sexo) {
+		this.sexo = sexo;
 	}
 	
 	

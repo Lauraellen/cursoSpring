@@ -9,3 +9,10 @@
 0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:39:53 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3227 http-bio-9090-exec-10 10
 0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:44:37 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 500 7080 http-bio-9090-exec-1 1709
 0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:46:06 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 500 7080 http-bio-9090-exec-1 332
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:45 -0300] "GET /intro-spring-mvc HTTP/1.1" 302 - http-bio-9090-exec-1 0
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:45 -0300] "GET /intro-spring-mvc/ HTTP/1.1" 302 - http-bio-9090-exec-3 94
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:47 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3551 http-bio-9090-exec-4 1748
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:53 -0300] "GET /intro-spring-mvc/usuario/update/1623156459470 HTTP/1.1" 200 2237 http-bio-9090-exec-5 111
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:53 -0300] "GET /intro-spring-mvc/static/css/bootstrap.css HTTP/1.1" 404 949 http-bio-9090-exec-6 6
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:58 -0300] "POST /intro-spring-mvc/usuario/update HTTP/1.1" 302 - http-bio-9090-exec-7 45
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:47:58 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3583 http-bio-9090-exec-8 13

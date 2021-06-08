@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.devmedia.curso.dao.UsuarioDao;
+import br.com.devmedia.curso.domain.TipoSexo;
 import br.com.devmedia.curso.domain.Usuario;
 
 /*
@@ -60,6 +61,13 @@ public class UsuarioController {
 	 */
 	@GetMapping("/cadastro")
 	public String cadastro(@ModelAttribute("usuario") Usuario usuario, ModelMap model) {
+		/*
+		 * o values é um método padrão do enum que retorna um array
+		 * com todos os valores que temos no enum;
+		 * é como se estivesse retornando uma lista contendo cada um dos tipos
+		 * que nós temos dentro do TipoSexo.
+		 */
+		model.addAttribute("sexos", TipoSexo.values());
 		return "/user/add";
 	}
 	
