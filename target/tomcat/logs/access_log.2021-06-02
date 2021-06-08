@@ -11,3 +11,7 @@
 0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:39:21 -0300] "POST /intro-spring-mvc/usuario/update HTTP/1.1" 302 - http-bio-9090-exec-10 27
 0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:39:21 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 2819 http-bio-9090-exec-10 4
 0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:39:23 -0300] "GET /intro-spring-mvc/usuario/delete HTTP/1.1" 404 949 http-bio-9090-exec-10 2
+0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:42:48 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3031 http-bio-9090-exec-1 642
+0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:42:50 -0300] "GET /intro-spring-mvc/usuario/delete/1622659365860 HTTP/1.1" 302 - http-bio-9090-exec-3 26
+0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:42:50 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 2667 http-bio-9090-exec-4 6
+0:0:0:0:0:0:0:1 - - [02/Jun/2021:15:42:52 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 2645 http-bio-9090-exec-5 4

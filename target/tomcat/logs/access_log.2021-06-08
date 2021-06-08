@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:43 -0300] "GET /intro-spring-mvc HTTP/1.1" 302 - http-bio-9090-exec-1 0
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:43 -0300] "GET /intro-spring-mvc/ HTTP/1.1" 302 - http-bio-9090-exec-3 52
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:44 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3799 http-bio-9090-exec-4 886
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:46 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-5 0
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:50 -0300] "GET /intro-spring-mvc/usuario/update/1623155727683;jsessionid=A323A1A9FDFD90776B2555305C390694 HTTP/1.1" 200 2237 http-bio-9090-exec-6 372
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:35:50 -0300] "GET /intro-spring-mvc/static/css/bootstrap.css HTTP/1.1" 404 949 http-bio-9090-exec-7 8
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:36:01 -0300] "POST /intro-spring-mvc/usuario/update HTTP/1.1" 400 968 http-bio-9090-exec-8 65
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:39:48 -0300] "POST /intro-spring-mvc/usuario/update HTTP/1.1" 400 968 http-bio-9090-exec-9 7
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:39:53 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 200 3227 http-bio-9090-exec-10 10
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:44:37 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 500 7080 http-bio-9090-exec-1 1709
+0:0:0:0:0:0:0:1 - - [08/Jun/2021:09:46:06 -0300] "GET /intro-spring-mvc/usuario/todos HTTP/1.1" 500 7080 http-bio-9090-exec-1 332
