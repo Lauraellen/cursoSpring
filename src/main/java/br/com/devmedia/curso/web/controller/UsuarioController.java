@@ -1,8 +1,11 @@
 package br.com.devmedia.curso.web.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -78,9 +81,17 @@ public class UsuarioController {
 	 * no formulario, é do tipo Usuario.
 	 * 
 	 * Quando o formulario enviar os dados, recebemos ja como um objeto;
+	 * 
+	 * a anotação @Valid diz ao spring pra ele usar a validação do Bean Validation;
+	 * 
+	 * BindignResult é para usar para alterar o fluxo para caso tenha algum tipo de erro (caminho)
+	 * e tem que estar obrigatoriamente antes do redirect
 	 */
 	@PostMapping("/save")
-	public String save(@ModelAttribute("usuario") Usuario usuario, RedirectAttributes attr) {
+	public String save(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult result, RedirectAttributes attr) {
+		if(result.hasErrors()) {
+			return "/user/add";
+		}
 		dao.salvar(usuario);
 		attr.addFlashAttribute("message", "Usuário salvo com sucesso");
 		return "redirect:/usuario/todos";
@@ -107,7 +118,10 @@ public class UsuarioController {
 	 */
 	
 	@PostMapping("/update")
-	public ModelAndView update(@ModelAttribute("usuario") Usuario usuario, RedirectAttributes attr) {
+	public ModelAndView update(@ModelAttribute("usuario") Usuario usuario, BindingResult result, RedirectAttributes attr) {
+		if(result.hasErrors()) {
+			return new ModelAndView("/user/add");
+		}
 		dao.editar(usuario);
 		attr.addFlashAttribute("message", "Usuário alterado com sucesso");
 		return new ModelAndView("redirect:/usuario/todos");
